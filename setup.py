@@ -14,7 +14,11 @@ except ImportError:
 
 install_requires = [
     'Django>=1.11',
-    'sparse_list>=0.6',
+    'sparse_list',
+]
+
+dependency_links = [
+    'git+https://github.com/wetneb/python_sparse_list@issue-12-slice-deletion#egg=sparse_list'
 ]
 
 tests_require = [
@@ -64,6 +68,7 @@ setup(
     ],
     zip_safe=False,
     install_requires=install_requires,
+    dependency_links=dependency_links,
     tests_require=tests_require,
     test_suite="test_haystack.run_tests.run_all",
     setup_requires=["setuptools_scm"],
